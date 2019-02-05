@@ -10,7 +10,8 @@
           <button (click)="addTodo(newTodo.value); newTodo.value=''"> Add </button>
           <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
           <br>
-          <div *ngIf="!show">
+          <div *ngIf="!show; else elseBlock">
+              <ng-template #elseBlock> Hello Click the Button Again to Show the Table </ng-template>
                         <table>
                               <tr>
                                 <th>Label</th>
