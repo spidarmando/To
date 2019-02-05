@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'To Do List';
+  show: boolean = true;
   todos = [
     {
       label: 'Send Files',

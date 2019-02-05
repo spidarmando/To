@@ -10,21 +10,24 @@
           <button (click)="addTodo(newTodo.value); newTodo.value=''"> Add </button>
           <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
           <br>
+          <div *ngIf="show">
+            <table>
+                  <tr>
+                    <th>Label</th>
+                    <th>Done</th>
+                    <th>Actions</th>
+                  </tr>
+                  <tr *ngFor='let todo of todos'>
+                    <td>{{todo.label}}</td>
+                    <td>{{todo.done ? '&#10003;' : '&#10005;'}}</td>
+                    <td>
+                      <button (click)="deleteTodo(todo)"> Delete </button>
+                    </td>
+                  </tr>
+            </table>
+          </div>
           <div *ngIf="!show">
-                        <table>
-                              <tr>
-                                <th>Label</th>
-                                <th>Done</th>
-                                <th>Actions</th>
-                              </tr>
-                              <tr *ngFor='let todo of todos'>
-                                <td>{{todo.label}}</td>
-                                <td>{{todo.done ? '&#10003;' : '&#10005;'}}</td>
-                                <td>
-                                  <button (click)="deleteTodo(todo)"> Delete </button>
-                                </td>
-                              </tr>
-                        </table>
-              </div>
+            this is the options page
+          </div>
         </div>
 </html>
