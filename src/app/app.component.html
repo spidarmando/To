@@ -10,7 +10,6 @@
           <button (click)="addTodo(newTodo.value); newTodo.value=''"> Add </button>
           <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
           <br>
-<<<<<<< HEAD
           <div *ngIf="show">
             <table>
                   <tr>
@@ -30,7 +29,6 @@
           <div *ngIf="!show">
             this is the options page
           </div>
-=======
           <div *ngIf="!show; else elseBlock">
               <ng-template #elseBlock> Hello Click the Button Again to Show the Table </ng-template>
                         <table>
@@ -48,6 +46,5 @@
                               </tr>
                         </table>
               </div>
->>>>>>> c05b7589a9e0219ef5f897a8afb488ddf9aeb0b6
         </div>
 </html>
