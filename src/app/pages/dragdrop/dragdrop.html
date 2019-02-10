@@ -1,0 +1,18 @@
+<div>
+    <div class="drag-container">
+        <div *ngFor="let row of rows;">
+            <div dropMark (dropEmit)="drop($event)"></div>
+            <div dropMark (dropEmit)="drop($event)"></div>
+            <div dropMark (dropEmit)="drop($event)"></div>
+        </div> 
+    </div>
+</div>
+
+
+<div style="width:5rem">
+    <div draggable="true" draggableMark (dragEmit)="dragEmit($event)" class="infos">mark</div>
+    <div draggable="true" draggableMark (dragEmit)="dragEmit($event)" class="infos">aris</div>
+    <div draggable="true" draggableMark (dragEmit)="dragEmit($event)" class="infos">armando</div>
+
+    <div draggable="true" draggableMark (dragEmit)="dragEmit($event)" class="infos"> allere</div>
+</div>
