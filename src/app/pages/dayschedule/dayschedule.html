@@ -1,0 +1,13 @@
+<div class="dayschedule-container noselect">
+    <div class="dayschedule-time" *ngFor="let time of arrTime">
+        <div>{{ time }}</div>
+        <div class="time" [attr.time]="time" >
+            <div class="timedata" [attr.index]="timedata.record" *ngFor="let timedata of time | rosterFormat: timeData" movable>
+                <span>{{ timedata.job }}</span>
+                <div class="resizer" resizer>
+                    <i class="material-icons"> unfold_more </i>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
